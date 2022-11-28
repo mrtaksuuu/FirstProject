@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Ogrenci
+
+<div class="card">
+    <div class="card-header">
+        <h3>Yeni Öğrenci Ekle</h3>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-controller="Ogrenci" asp-action="Create">
+            <div class="mb-3">
+                <label asp-for="OgrenciAdi" class="form-label">Ogrenci Adı :</label>
+                <input asp-for="OgrenciAdi" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="OgrenciSoyadi" class="form-label">Ogrenci Soyadı :</label>
+                <input asp-for="OgrenciSoyadi" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="OgrenciNo" class="form-label">Ogrenci No :</label>
+                <input asp-for="OgrenciNo" class="form-control">
+            </div>
+            <select asp-for="SinifId" asp-items="@ViewBag.sinif">
+                <option value="">Sınıf Seçiniz</option>
+            </select>
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </form>
+    </div>
+</div>
+

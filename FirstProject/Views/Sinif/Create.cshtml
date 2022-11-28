@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Sinif
+
+<div class="card">
+    <div class="card-header">
+        <h3>Yeni Sinif Ekle</h3>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-controller="Sinif" asp-action="Create">
+            <label asp-for="SinifAdi" class="form-label">Ürün İsmi :</label>
+            <input asp-for="SinifAdi" class="form-control">
+
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </form>
+    </div>
+</div>
+

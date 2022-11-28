@@ -1,0 +1,30 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IList<Sinif>
+
+
+<a class="btn btn-success" asp-controller="Sinif" asp-action="Create">Yeni Sinif Ekle</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>SinifAdi</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.SinifAdi</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
